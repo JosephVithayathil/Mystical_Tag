@@ -1,7 +1,7 @@
 """Client rest api urls."""
 from django.conf.urls import url
 from rest_framework.routers import SimpleRouter
-from .apis import signup, login
+from .apis import signup, login, search_films
 from . import views
 
 
@@ -19,5 +19,8 @@ router.register(r'user_name_check_api', signup.UserNameCheckAPI, "user_name_chec
 router.register(r'user_login_api', login.UserLoginAPI, "user_login_api")
 router.register(r'user_logout_api', login.UserLoginAPI, "user_logout_api")
 
+
+# Search API's
+router.register(r'search_api', search_films.SearchAPI, "search_api")
 
 urlpatterns += router.urls

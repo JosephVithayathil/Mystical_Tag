@@ -5,7 +5,6 @@ from rest_framework.decorators import permission_classes
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
 from common_library.status_codes import ApiStatusCodes
-# from sigma_core.models import Player
 
 
 @permission_classes((permissions.AllowAny,))
