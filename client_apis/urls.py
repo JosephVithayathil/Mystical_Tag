@@ -1,9 +1,13 @@
 """Client rest api urls."""
+from django.conf.urls import url
 from rest_framework.routers import SimpleRouter
 from .apis import signup, login
+from . import views
 
 
 urlpatterns = [
+    # Views
+    url(r'^upload/(?P<filename>[^/]+)$', views.FileUploadView.as_view())
 ]
 router = SimpleRouter(trailing_slash=False)
 
@@ -14,5 +18,6 @@ router.register(r'user_name_check_api', signup.UserNameCheckAPI, "user_name_chec
 # Login API's
 router.register(r'user_login_api', login.UserLoginAPI, "user_login_api")
 router.register(r'user_logout_api', login.UserLoginAPI, "user_logout_api")
+
 
 urlpatterns += router.urls
