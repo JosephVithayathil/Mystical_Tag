@@ -26,4 +26,4 @@ class Movie(models.Model):
     imdb_score = models.FloatField(default=0.0)
     director = models.ForeignKey(Director, related_name="movie_director",
                                  null=True, on_delete=models.CASCADE)
-    tags = models.ManyToManyField(Tags, null=True)
+    tags = models.ManyToManyField(Tags)
