@@ -1,5 +1,5 @@
 # Mystical_Tag
-Tagging system with django and mysql efficient for searching.(Example film search)
+Movie Search with Django.
 
 ## Highlights
 * Python 3.6.x | Django 2.1.x | SQLite 3
