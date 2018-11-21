@@ -9,8 +9,17 @@ from common_library.status_codes import ApiStatusCodes
 
 @permission_classes((permissions.AllowAny,))
 class UserLoginAPI(viewsets.ViewSet):
+    """API for login.
+       Input:
+        1. uname : User Name
+        2. pwd : Password
+       Output:
+        1. st: Status
+        2. scrt_key: Secret Key that should be appended on the header as Autherisation token.
+    """
 
     def create(self, request, format=None):
+        """POST api."""
         uname = request.data.get("uname", None)
         password = request.data.get("pwd", None)
         login_user = authenticate(username=uname, password=password)
@@ -27,7 +36,13 @@ class UserLoginAPI(viewsets.ViewSet):
 
 @permission_classes((permissions.IsAuthenticated,))
 class PlayerLogoutAPI(viewsets.ViewSet):
-
+    """API for logout.
+       Input:
+        "Empty"
+       Output:
+        1. st: Status
+    """
     def create(self, request, format=None):
+        """POST api."""
         Token.objects.filter(user=request.user).delete()
         return Response({"st": ApiStatusCodes.OK})
