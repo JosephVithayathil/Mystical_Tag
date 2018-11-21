@@ -1,7 +1,7 @@
 """Client rest api urls."""
 from django.conf.urls import url
 from rest_framework.routers import SimpleRouter
-from .apis import signup, login, search_films
+from .apis import signup, login, search_films, create_edit_film
 from . import views
 
 
@@ -22,5 +22,9 @@ router.register(r'user_logout_api', login.UserLoginAPI, "user_logout_api")
 
 # Search API's
 router.register(r'search_api', search_films.SearchAPI, "search_api")
+
+# Create or Edit Movies API's
+router.register(r'create_edit_movie_api', create_edit_film.Create_Edit_Movie_API, "create_edit_movie_api")
+
 
 urlpatterns += router.urls
