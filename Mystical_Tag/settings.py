@@ -87,9 +87,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mystical_tag_db',
-        'HOST': 'mysticaltagdb.c6lbpci1xlun.us-east-1.rds.amazonaws.com',
+        'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': '1234qwer',
+        'PASSWORD': 'root',
     }
 }
 # DATABASES = {
