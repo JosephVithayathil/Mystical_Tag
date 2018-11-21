@@ -83,21 +83,21 @@ WSGI_APPLICATION = 'Mystical_Tag.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'mystical_tag_db',
-#         'HOST': 'localhost',
-#         'USER': 'root',
-#         'PASSWORD': 'root',
-#     }
-# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mystical_tag_db',
+        'HOST': 'mysticaltagdb.c6lbpci1xlun.us-east-1.rds.amazonaws.com',
+        'USER': 'root',
+        'PASSWORD': '1234qwer',
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 
 # Password validation
