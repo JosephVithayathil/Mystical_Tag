@@ -2,7 +2,7 @@
 Movie Search with Django.
 
 ## Highlights
-* Python 3.6.x | Django 2.1.x | SQLite 3
+* Python 3.6.x | Django 2.1.x | MySQL
 * Tag based search in Mysql
 
 
