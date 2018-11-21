@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
 
     # Local apps
-    'tags_core'
+    'tags_core',
+    'admin_panel',
+    'client_apis'
 ]
 
 MIDDLEWARE = [
